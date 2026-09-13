@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Checking capstone pipeline"
+      - test -f README.md
+      - mkdir -p dist
+      - echo "Pipeline test passed" > dist/result.txt
+
+artifacts:
+  base-directory: dist
+  files:
+    - result.txt
